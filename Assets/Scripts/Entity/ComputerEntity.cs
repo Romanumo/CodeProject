@@ -20,13 +20,18 @@ public class ComputerEntity : MonoBehaviour
         if (IsInRange() && Input.GetKeyDown(KeyCode.Q))
         {
             programState = !programState;
-            compiler.CompilerState(programState);
-            ChangeComputerControl(programState);
-            player.ChangeControl(!programState);
-
             if (Time.timeScale == 0)
                 Time.timeScale = 1;
+
+            GeneralFunctions.BlackScreenBoth(0.5f, ChangeGameState);
         }
+    }
+
+    private void ChangeGameState()
+    {
+        compiler.CompilerState(programState);
+        ChangeComputerControl(programState);
+        player.ChangeControl(!programState);
     }
 
     private void ChangeComputerControl(bool state)

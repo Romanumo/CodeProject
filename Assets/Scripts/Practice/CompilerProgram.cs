@@ -29,13 +29,13 @@ public class CompilerProgram : MonoBehaviour
         entities = new List<PracticeEntity>();
     }
 
-    public void Subscribe()
-    {
-
-    }
-
     public void CompilerState(bool state)
     {
+        foreach (PracticeEntity entity in entities)
+        {
+            entity.outline.enabled = state;
+        }
+
         compilerWindow.SetActive(state);
         Cursor.lockState = (state) ? CursorLockMode.None : CursorLockMode.Locked;
     }
@@ -44,6 +44,16 @@ public class CompilerProgram : MonoBehaviour
     {
         entityType = entity.GetType();
         chosenEntity = entity;
+    }
+
+    public void Subscribe(PracticeEntity entity)
+    {
+        entities.Add(entity);
+    }
+
+    public void Unsubscribe(PracticeEntity entity)
+    {
+        entities.Remove(entity);
     }
 
     #region CoreCompiler

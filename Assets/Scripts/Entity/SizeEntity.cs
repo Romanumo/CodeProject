@@ -6,8 +6,9 @@ public class SizeEntity : PracticeEntity
 {
     private Vector3 proportions;
 
-    private void Start()
+    private new void Start()
     {
+        base.Start();
         proportions = transform.localScale.normalized;
     }
 

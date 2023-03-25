@@ -11,11 +11,17 @@ public abstract class PracticeEntity : MonoBehaviour
 
     public Outline outline { get; private set; }
 
-    protected void Awake()
+    protected void Start()
     {
         outline = GetComponent<Outline>();
+        CompilerProgram.instance.Subscribe(this);
 
         InitInfo();
+    }
+
+    private void OnDestroy()
+    {
+        CompilerProgram.instance.Unsubscribe(this);
     }
 
     private void InitInfo()
