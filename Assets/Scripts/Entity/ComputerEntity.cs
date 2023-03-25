@@ -17,7 +17,7 @@ public class ComputerEntity : MonoBehaviour
 
     void Update()
     {
-        if (IsInRange() && Input.GetKeyDown(KeyCode.Q))
+        if (IsInRange() && Input.GetKeyDown(KeyCode.Escape))
         {
             programState = !programState;
             if (Time.timeScale == 0)
