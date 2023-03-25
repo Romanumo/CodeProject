@@ -5,6 +5,8 @@ using UnityEngine;
 public class MouseControl : MonoBehaviour
 {
     [SerializeField] private Camera CompilerCam;
+    [SerializeField] private Color onAbove;
+    [SerializeField] private Color onSelected;
     private PracticeEntity previousEntity;
 
     void Update()
@@ -16,20 +18,25 @@ public class MouseControl : MonoBehaviour
             PracticeEntity entity;
             if (hit.collider.gameObject.TryGetComponent(out entity))
             {
+                Outline(entity, onAbove);
                 if (Input.GetMouseButtonDown(0))
+                {
                     VariablesManager.instance.ChangeChosenEntity(entity);
-
-                Outline(entity);
+                    Outline(entity, onSelected);
+                }
             }
         }
     }
 
-    private void Outline(PracticeEntity entity)
+    private void Outline(PracticeEntity entity, Color color)
     {
         if(previousEntity != null &&  previousEntity != entity)
             previousEntity.outline.OutlineColor = Color.black;
 
-        entity.outline.OutlineColor = Color.gray;
+        if (color == onAbove && entity.outline.OutlineColor == onSelected)
+            return;
+
+        entity.outline.OutlineColor = color;
         previousEntity = entity;
     }
 }

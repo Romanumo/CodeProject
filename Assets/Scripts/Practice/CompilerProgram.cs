@@ -13,6 +13,7 @@ public class CompilerProgram : MonoBehaviour
     [SerializeField] private TextMeshProUGUI lineText;
     [SerializeField] private TextMeshProUGUI debugText;
     [SerializeField] private GameObject compilerWindow;
+    [SerializeField] private SyntaxTheme syntaxTheme;
     private List<PracticeEntity> entities;
 
     public PracticeEntity chosenEntity { get; private set; }
@@ -29,6 +30,11 @@ public class CompilerProgram : MonoBehaviour
         entities = new List<PracticeEntity>();
     }
 
+    /*private void Update()
+    {
+        input.text = SyntaxHighlighter.HighlightCode(input.text, syntaxTheme);
+    }*/
+
     public void CompilerState(bool state)
     {
         foreach (PracticeEntity entity in entities)
@@ -43,6 +49,7 @@ public class CompilerProgram : MonoBehaviour
     public void ChangeChosenEntity(PracticeEntity entity)
     {
         entityType = entity.GetType();
+        entity.outline.OutlineColor = Color.yellow;
         chosenEntity = entity;
     }
 
@@ -59,6 +66,7 @@ public class CompilerProgram : MonoBehaviour
     #region CoreCompiler
     public void Run()
     {
+        string userCode = input.text;
         string code = @"
         using UnityEngine;
 
@@ -67,7 +75,7 @@ public class CompilerProgram : MonoBehaviour
             public static void Foo()
             {
                 " + entityType.ToString() + @" entity = CompilerProgram.instance.chosenEntity as " + entityType.ToString() + @";
-                " + input.text + @"
+                " + userCode + @"
             }
         }";
 
@@ -107,7 +115,7 @@ public class CompilerProgram : MonoBehaviour
     #endregion
 
     #region UI
-    public void LinerUpdate()
+    public void EditorUpdate()
     {
         lineText.text = "";
         for (int i = 0; i < input.text.Split('\n').Length; i++)
