@@ -30,10 +30,10 @@ public class CompilerProgram : MonoBehaviour
         entities = new List<PracticeEntity>();
     }
 
-    private void Update()
+    /*private void Update()
     {
         input.text = SyntaxHighlighter.HighlightCode(input.text, syntaxTheme);
-    }
+    }*/
 
     public void CompilerState(bool state)
     {
