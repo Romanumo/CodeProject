@@ -1,0 +1,42 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ComputerEntity : MonoBehaviour
+{
+    [SerializeField] private CompilerProgram compiler;
+    [SerializeField] private float range;
+    [SerializeField] private Camera compilerCam;
+    private Player player;
+    bool programState = false;
+
+    void Awake()
+    {
+        player = FindObjectOfType<Player>();
+    }
+
+    void Update()
+    {
+        if (IsInRange() && Input.GetKeyDown(KeyCode.Q))
+        {
+            programState = !programState;
+            compiler.CompilerState(programState);
+            ChangeComputerControl(programState);
+            player.ChangeControl(!programState);
+
+            if (Time.timeScale == 0)
+                Time.timeScale = 1;
+        }
+    }
+
+    private void ChangeComputerControl(bool state)
+    {
+        compilerCam.gameObject.SetActive(state);
+    }
+
+    private bool IsInRange()
+    {
+        float dist = (transform.position - player.transform.position).magnitude;
+        return dist < range;
+    }
+}
