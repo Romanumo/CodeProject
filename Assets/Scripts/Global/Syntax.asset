@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a87905a780113e4d837c7ee9ebcf73b, type: 3}
   m_Name: Syntax
   m_EditorClassIdentifier: 
-  comment: {r: 1, g: 1, b: 1, a: 1}
+  comment: {r: 0, g: 0, b: 0, a: 1}
   loopKeyword: {r: 1, g: 0, b: 0, a: 1}
-  conditionKeyword: {r: 1, g: 1, b: 1, a: 1}
+  conditionKeyword: {r: 0, g: 0, b: 0, a: 1}
   mathOperator: {r: 0.6981132, g: 0.24038802, b: 0.24038802, a: 1}
   value: {r: 0.6037736, g: 0.42435032, b: 0.42435032, a: 1}
   parentheses: {r: 0.4433962, g: 0.0983001, b: 0.0983001, a: 1}
   curlyBrackets: {r: 1, g: 1, b: 1, a: 1}
-  comparisonOperator: {r: 0.6226415, g: 0.10279457, b: 0.10279457, a: 1}
-  assignment: {r: 1, g: 1, b: 1, a: 1}
-  variable: {r: 1, g: 1, b: 1, a: 1}
+  comparisonOperator: {r: 0.01886791, g: 0.01877891, b: 0.01877891, a: 1}
+  assignment: {r: 0, g: 0, b: 0, a: 1}
+  variable: {r: 0, g: 0, b: 0, a: 1}
