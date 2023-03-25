@@ -17,6 +17,14 @@ public class GeneralFunctions : MonoBehaviour
             _instance = this;
     }
 
+    public static void BlackScreenBoth(float time, Action postBlack)
+    {
+        TimerManager.manager.AddProgressiveTimer(() => {
+            TimerManager.manager.AddProgressiveTimer(null, BlackScreenFadeOut, time);
+            postBlack?.Invoke();
+            }, BlackScreenFadeIn, time);
+    }
+
     public static void BlackScreen(float time, Action postBlack, bool isInverted = false)
     {
         Action<float> update = (isInverted) ? BlackScreenFadeOut : BlackScreenFadeIn;

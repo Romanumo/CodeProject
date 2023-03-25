@@ -9,6 +9,7 @@ public class WinConditionManager : MonoBehaviour
 {
     [SerializeField] private List<WinCondition> winConditions;
     [SerializeField] private TextMeshProUGUI conditionsText;
+
     private Player player;
     private bool hasWon = false;
     private bool hasLost = false;
@@ -60,12 +61,17 @@ public class WinConditionManager : MonoBehaviour
 
     private void Win()
     {
-        Debug.Log("Win");
+        GeneralFunctions.BlackScreen(2f, NextLevel);
         hasWon = true;
     }
 
     private void GameRestart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    private void NextLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
