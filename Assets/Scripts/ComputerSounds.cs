@@ -5,6 +5,8 @@ using UnityEngine;
 public class ComputerSounds : MonoBehaviour
 {
     [SerializeField] private AudioClip clickSound;
+    [SerializeField] private AudioClip correctSound;
+    [SerializeField] private AudioClip incorrectSound;
 
     private AudioSource source;
 
@@ -16,6 +18,18 @@ public class ComputerSounds : MonoBehaviour
     public void ClickSound()
     {
         source.clip = clickSound;
+        source.Play();
+    }
+
+    public void CorrectSound()
+    {
+        source.clip = correctSound;
+        source.Play();
+    }
+
+    public void IncorrectSound()
+    {
+        source.clip = incorrectSound;
         source.Play();
     }
 }

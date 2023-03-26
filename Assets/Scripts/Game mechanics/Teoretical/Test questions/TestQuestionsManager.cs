@@ -9,6 +9,8 @@ public class TestQuestionsManager : MonoBehaviour
 	[SerializeField][HideInInspector] private ToggleGroup toggleGroupOfOptions;
 	[SerializeField][HideInInspector] private Button buttonToNextLevel;
 	[SerializeField][HideInInspector] private int correctOptionOfAnswer;
+	[SerializeField] private ComputerTheory theory;
+	[SerializeField] private ComputerSounds sounds;
 
 	private void Update()
 	{
@@ -36,10 +38,13 @@ public class TestQuestionsManager : MonoBehaviour
 	private void OnLoseLevel()
 	{
 		Debug.Log("Неправильно!");
+		sounds.IncorrectSound();
 	}
 
 	private void OnWinLevel()
 	{
 		Debug.Log("Вы выиграли!");
+		sounds.CorrectSound();
+		theory.OpenTheWay();
 	}
 }

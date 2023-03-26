@@ -11,6 +11,8 @@ public class MatchBlocksManager : MonoBehaviour
 
 	[SerializeField][HideInInspector] private int maxAmountOfCorrectBlocksInSequence;
 	[SerializeField][HideInInspector] private List<int> orderNumbersInSequence = new List<int>();
+	[SerializeField] private ComputerTheory theory;
+	[SerializeField] private ComputerSounds sounds;
 
 	public void AddBlockToSequence(BlockQuiz blockQuiz)
 	{
@@ -54,10 +56,13 @@ public class MatchBlocksManager : MonoBehaviour
 	private void OnLoseLevel()
 	{
 		Debug.Log("Неправильно!");
+		sounds.IncorrectSound();
 	}
 
 	private void OnWinLevel()
 	{
 		Debug.Log("Вы выиграли!");
+		theory.OpenTheWay();
+		sounds.CorrectSound();
 	}
 }

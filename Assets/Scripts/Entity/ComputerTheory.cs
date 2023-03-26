@@ -7,7 +7,8 @@ public class ComputerTheory : MonoBehaviour
     [SerializeField] private GameObject windowTheory;
     [SerializeField] private GameObject wall;
     [SerializeField] private float range;
-
+    [SerializeField] private GameObject cam;
+   
     private AudioSource source;
     private Player player;
     bool programState = false;
@@ -44,8 +45,10 @@ public class ComputerTheory : MonoBehaviour
 
     private void ChangeGameState()
     {
+        cam.SetActive(programState);
         player.ChangeControl(!programState);
         windowTheory.SetActive(programState);
+        Cursor.lockState = (programState) ? CursorLockMode.None : CursorLockMode.Locked;
     }
 
     private bool IsInRange()

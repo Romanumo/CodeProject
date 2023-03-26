@@ -46,6 +46,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clickSound: {fileID: 8300000, guid: 00c407aeec5e5b54ea30a39ad4cee94f, type: 3}
+  correctSound: {fileID: 8300000, guid: a198e3de9ac09be4daced224bbbcf005, type: 3}
+  incorrectSound: {fileID: 8300000, guid: 23021037c07011f4b95d7e010802fc93, type: 3}
 --- !u!82 &987335619855433567
 AudioSource:
   m_ObjectHideFlags: 0

@@ -33,5 +33,8 @@ public class DialogWindow : MonoBehaviour
         //player.ChangeMovement(!state);
         Time.timeScale = (state) ? 0.05f : 1;
         inWindow = state;
+
+        if (!state)
+            this.gameObject.SetActive(false);
     }
 }
