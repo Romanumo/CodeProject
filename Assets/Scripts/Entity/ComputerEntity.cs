@@ -7,11 +7,14 @@ public class ComputerEntity : MonoBehaviour
     [SerializeField] private CompilerProgram compiler;
     [SerializeField] private float range;
     [SerializeField] private Camera compilerCam;
+
+    private AudioSource source;
     private Player player;
     bool programState = false;
 
     void Awake()
     {
+        source = GetComponent<AudioSource>();
         player = FindObjectOfType<Player>();
     }
 
@@ -22,6 +25,14 @@ public class ComputerEntity : MonoBehaviour
             programState = !programState;
             if (Time.timeScale == 0)
                 Time.timeScale = 1;
+
+            if (programState)
+                source.Play();
+            else
+            {
+                source.time = 0;
+                source.Stop();
+            }
 
             GeneralFunctions.BlackScreenBoth(0.5f, ChangeGameState);
         }

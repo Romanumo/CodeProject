@@ -8,11 +8,13 @@ public class ComputerTheory : MonoBehaviour
     [SerializeField] private GameObject wall;
     [SerializeField] private float range;
 
+    private AudioSource source;
     private Player player;
     bool programState = false;
 
     void Awake()
     {
+        source = GetComponent<AudioSource>();
         player = FindObjectOfType<Player>();
     }
 
@@ -21,7 +23,17 @@ public class ComputerTheory : MonoBehaviour
         if (IsInRange() && Input.GetKeyDown(KeyCode.Escape))
         {
             programState = !programState;
+
+            if (programState)
+                source.Play();
+            else
+            {
+                source.time = 0;
+                source.Stop();
+            }
+
             GeneralFunctions.BlackScreenBoth(0.5f, ChangeGameState);
+
         }
     }
 

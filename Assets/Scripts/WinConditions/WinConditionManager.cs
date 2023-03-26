@@ -55,13 +55,13 @@ public class WinConditionManager : MonoBehaviour
             return;
 
         player.ChangeMovement(false);
-        GeneralFunctions.BlackScreen(2f, GameRestart);
+        GeneralFunctions.BlackScreen(1f, GameRestart);
         hasLost = true;
     }
 
     private void Win()
     {
-        GeneralFunctions.BlackScreen(2f, NextLevel);
+        GeneralFunctions.BlackScreen(1f, NextLevel);
         hasWon = true;
     }
 
