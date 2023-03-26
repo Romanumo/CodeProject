@@ -10,11 +10,11 @@ public class MatchBlocksEditor : MonoBehaviour
 	[SerializeField][TextArea(3, 7)][Space] private string question;
 	[SerializeField][Space(20)] List<AnswerType> variationsOfAnswers = new List<AnswerType>();
 
-	[SerializeField][HideInInspector] private TMP_Text questionText;
-	[SerializeField][HideInInspector] private BlockQuiz prefabBlockQuiz;
-	[SerializeField][HideInInspector] private Transform panelForAnswerBlocks;
+	[SerializeField] private TMP_Text questionText;
+	[SerializeField] private BlockQuiz prefabBlockQuiz;
+	[SerializeField] private Transform panelForAnswerBlocks;
 
-	[SerializeField][HideInInspector] private List<BlockQuiz> instantiatedBlocksAnswers = new List<BlockQuiz>();
+	[SerializeField] private List<BlockQuiz> instantiatedBlocksAnswers = new List<BlockQuiz>();
 
 	private void Update()
 	{
