@@ -7,8 +7,9 @@ public class ComputerTheory : MonoBehaviour
     [SerializeField] private GameObject windowTheory;
     [SerializeField] private GameObject wall;
     [SerializeField] private float range;
+
     [SerializeField] private GameObject cam;
-   
+
     private AudioSource source;
     private Player player;
     bool programState = false;
