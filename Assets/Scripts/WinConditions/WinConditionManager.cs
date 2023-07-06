@@ -26,11 +26,8 @@ public class WinConditionManager : MonoBehaviour
     private void Start()
     {
         player = FindObjectOfType<Player>();
-        conditionsText.text = "Win Conditions: \n";
-        foreach (WinCondition condition in winConditions)
-        {
-            conditionsText.text += "- " + condition.ToObjective() + "\n";
-        }
+        if (conditionsText != null)
+            AssignCondidtionsText();
     }
 
     private void Update()
@@ -49,19 +46,28 @@ public class WinConditionManager : MonoBehaviour
             Win();
     }
 
+    private void AssignCondidtionsText()
+    {
+        conditionsText.text = "Win Conditions: \n";
+        foreach (WinCondition condition in winConditions)
+        {
+            conditionsText.text += "- " + condition.ToObjective() + "\n";
+        }
+    }
+
     public void Lose()
     {
         if (hasLost)
             return;
 
         player.ChangeMovement(false);
-        GeneralFunctions.BlackScreen(1f, GameRestart);
+        GameManager.BlackScreen(1f, GameRestart);
         hasLost = true;
     }
 
     private void Win()
     {
-        GeneralFunctions.BlackScreen(1f, NextLevel);
+        GameManager.BlackScreen(1f, NextLevel);
         hasWon = true;
     }
 

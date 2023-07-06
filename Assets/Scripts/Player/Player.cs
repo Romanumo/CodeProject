@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        GeneralFunctions.BlackScreen(1f, null, true);
+        GameManager.BlackScreen(1f, null, true);
         playerCam = transform.Find("MainCamera").GetComponent<Camera>();
         movement = GetComponent<PlayerMovement>();
     }
