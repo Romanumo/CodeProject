@@ -10,6 +10,7 @@ public class ComputerEntity : MonoBehaviour
 
     private AudioSource source;
     private Player player;
+    bool programState = false;
 
     void Awake()
     {
@@ -21,31 +22,27 @@ public class ComputerEntity : MonoBehaviour
     {
         if (IsInRange() && Input.GetKeyDown(KeyCode.Escape))
         {
-            bool state = (GameManager.instance.state == GameState.Computer);
-            GameManager.instance.ChangeGameState((!state) ? GameState.Computer : GameState.Player);
+            programState = !programState;
+            if (Time.timeScale == 0)
+                Time.timeScale = 1;
 
-            ComputerSoundsState(state);
+            if (programState)
+                source.Play();
+            else
+            {
+                source.time = 0;
+                source.Stop();
+            }
 
-            GameManager.BlackScreenBoth(0.5f, () => ComputerState(state));
+            GeneralFunctions.BlackScreenBoth(0.5f, ChangeGameState);
         }
     }
 
-    private void ComputerSoundsState(bool state)
+    private void ChangeGameState()
     {
-        if (state)
-            source.Play();
-        else
-        {
-            source.time = 0;
-            source.Stop();
-        }
-    }
-
-    private void ComputerState(bool state)
-    {
-        compiler.CompilerState(state);
-        ChangeComputerControl(state);
-        player.ChangeControl(!state);
+        compiler.CompilerState(programState);
+        ChangeComputerControl(programState);
+        player.ChangeControl(!programState);
     }
 
     private void ChangeComputerControl(bool state)
