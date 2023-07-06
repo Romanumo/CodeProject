@@ -4,7 +4,7 @@ This game features:
 
 ### Great Atmosphere
 This game has a sort of spooky forest feel to it. This way we intend to attract more young audeience to start learning programming languages
-![Screenshot (402)](https://github.com/Romanumo/CodeProject/assets/79278079/5343e6c9-7fd4-495c-8aa4-ae014d243277)
+![Screenshot (402)](Assets/Screenshot (402).png)
 
 ### Mini quizess
 ![Screenshot (403)](https://github.com/Romanumo/CodeProject/assets/79278079/f6c46bcc-d30a-4375-8fe1-4e789a61a036)
