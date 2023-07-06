@@ -3,6 +3,7 @@ Game created for a 3 day game hackathon. This game goal is to teach a player abo
 This game features:
 
 ### Great Atmosphere
+This game has a sort of spooky forest feel to it. This way we intend to attract more young audeience to start learning programming languages
 ![Screenshot (402)](https://github.com/Romanumo/CodeProject/assets/79278079/5343e6c9-7fd4-495c-8aa4-ae014d243277)
 
 ### Mini quizess
