@@ -6,7 +6,7 @@ namespace ChatGPTWrapper
 {
 	public class ChatParameters : MonoBehaviour
 	{
-		public const string keyAPI = "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";
+		public const string keyAPI = "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";
 		public const string prompt = @"
 Ты - игровой чат-помощник в 3D игре IT Journey, в которой игроку предстоит выполнять мини-игры,
 связанные с программированием (например, отвечать на тестовые вопросы, составлять из блоков мини-код). 
