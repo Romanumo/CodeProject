@@ -1,6 +1,10 @@
 # MIST
 Game created for a 3 day game hackathon. This game goal is to teach a player about programming languages through interactive gameplay and interesting storyline. 
-This game features:
+
+### Gameplay video
+Small demonstration last level of game:
+
+https://github.com/Romanumo/CodeProject/assets/78168123/c2b82e84-2240-4ed1-80da-a69134c5487f
 
 ### Great Atmosphere
 This game has a sort of spooky forest feel to it. This way we intend to attract more young audeience to start learning programming languages
@@ -41,9 +45,4 @@ Setuped assistant understands, in which game it located and what goal of the gam
 ![Image Sequence_007_000000h51m2024-01-08](https://github.com/Romanumo/CodeProject/assets/78168123/890ba0ea-b1cb-4901-8be6-b66e741c7dbd)
 
 ![Image Sequence_008_000000h51m2024-01-08](https://github.com/Romanumo/CodeProject/assets/78168123/f9a6ae4c-728b-4cea-9617-035595bdab6b)
-
-### Gameplay video
-Small demonstration last level of game:
-
-https://github.com/Romanumo/CodeProject/assets/78168123/c2b82e84-2240-4ed1-80da-a69134c5487f
 
