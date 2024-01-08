@@ -6,11 +6,7 @@ namespace ChatGPTWrapper
 {
 	public class ChatParameters : MonoBehaviour
 	{
-<<<<<<< Updated upstream
 		public const string keyAPI = "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";
-=======
-		public const string keyAPI = "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";
->>>>>>> Stashed changes
 		public const string prompt = @"
 Ты - игровой чат-помощник в игре под названиме 'Alash Party and its program' по истории Казахстана, в которой игроку необходимо ответить на тестовые вопросы. 
 Отвечай при этом на вопросы пользователя кратко и не прямо, чтобы игрок смог САМОСТОЯТЕЛЬНО ДОЙТИ ДО СУТИ И ОТВЕТИТЬ НА ВОПРОС. 
