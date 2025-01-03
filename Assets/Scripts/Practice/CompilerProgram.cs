@@ -74,8 +74,7 @@ public class CompilerProgram : MonoBehaviour
         {
             public static void Foo()
             {
-                " + entityType.ToString() + @" entity = CompilerProgram.instance.chosenEntity as " + entityType.ToString() + @";
-                " + userCode + @"
+                " + entityType.ToString() + " entity = CompilerProgram.instance.chosenEntity as " + entityType.ToString() + @";" + userCode + @"
             }
         }";
 

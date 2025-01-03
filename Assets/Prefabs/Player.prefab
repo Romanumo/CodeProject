@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 5098620804022331375}
   - component: {fileID: 5098620804022331374}
   - component: {fileID: 5098620804022331368}
+  - component: {fileID: 5098620804022331159}
   - component: {fileID: 5098620804022331369}
   - component: {fileID: 5098620804022331371}
   - component: {fileID: 5098620804022331158}
-  - component: {fileID: 5098620804022331159}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -107,6 +107,18 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5098620804022331159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5098620804022331360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed485f648c528f24a8fa5baf424dbcef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &5098620804022331369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,7 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0eb792b35773264292e696ccc3b767f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensetivity: 200
+  mouseSensetivity: 1
   maxXrot: 90
   minXrot: -90
 --- !u!114 &5098620804022331371
@@ -253,18 +265,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &5098620804022331159
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5098620804022331360}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed485f648c528f24a8fa5baf424dbcef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &5098620804560742375
 GameObject:
   m_ObjectHideFlags: 0

@@ -1020,6 +1020,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Info box
       objectReference: {fileID: 0}
+    - target: {fileID: 2174118051781839334, guid: 9e52357a07be0134b80ea704d526d2b2, type: 3}
+      propertyPath: m_text
+      value: Hello, Traveler! I am your interactive assistant in the world of programming!
+      objectReference: {fileID: 0}
     - target: {fileID: 6574374907556483488, guid: 9e52357a07be0134b80ea704d526d2b2, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1392,7 +1396,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6934294173470101836, guid: c11b4eec88786894eabd8fc0ed0f4884, type: 3}
       propertyPath: m_text
-      value: "\u043D\u0430\u043F\u0438\u0448\u0438 \u043A\u043E\u0434"
+      value: Code to rule em all
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c11b4eec88786894eabd8fc0ed0f4884, type: 3}
@@ -6075,7 +6079,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0427\u0430\u0442"
+  m_text: GPT
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6762b5ed95696c44084b12486081a909, type: 2}
   m_sharedMaterial: {fileID: 4352277801950955582, guid: 6762b5ed95696c44084b12486081a909, type: 2}
@@ -6336,7 +6340,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -713.3447, y: 0}
+  m_AnchoredPosition: {x: -713.3448, y: 0}
   m_SizeDelta: {x: -1432.0372, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &3565133759918192933
@@ -6697,7 +6701,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u041A\u043E\u043C\u043F\u0438\u043B\u044F\u0442\u043E\u0440"
+  m_text: Compiler
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6762b5ed95696c44084b12486081a909, type: 2}
   m_sharedMaterial: {fileID: 4352277801950955582, guid: 6762b5ed95696c44084b12486081a909, type: 2}
@@ -6783,7 +6787,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 46.632996, y: 0.000030517578}
+  m_AnchoredPosition: {x: 46.633057, y: 0.000030517578}
   m_SizeDelta: {x: -279.82138, y: -32.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &3565133760112378031
