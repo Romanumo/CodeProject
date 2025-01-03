@@ -46,3 +46,5 @@ Setuped assistant understands, in which game it located and what goal of the gam
 
 ![Image Sequence_008_000000h51m2024-01-08](https://github.com/Romanumo/CodeProject/assets/78168123/f9a6ae4c-728b-4cea-9617-035595bdab6b)
 
+### Disclaimer
+Currently, due to the end of the hackathon event, our current OpenAI API keys are no longer working. Integrated in-game ChatGPT assistant is no longer available
