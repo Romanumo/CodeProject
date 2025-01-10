@@ -45,6 +45,6 @@ public class TestQuestionsManager : MonoBehaviour
 	{
 		Debug.Log("Вы выиграли!");
 		sounds.CorrectSound();
-		theory.OpenTheWay();
+		theory.	OpenTheWay();
 	}
 }

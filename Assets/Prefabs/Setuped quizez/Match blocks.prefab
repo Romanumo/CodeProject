@@ -387,11 +387,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0421\u043E\u0441\u0442\u0430\u0432\u044C\u0442\u0435 \u0441\u0442\u0440\u043E\u0447\u043A\u0443
-    \u043A\u043E\u0434\u0430, \u043F\u0440\u0438\u0441\u0432\u0430\u044E\u0449\u0438\u0439
-    \u0446\u0435\u043B\u043E\u0447\u0438\u0441\u043B\u0435\u043D\u043D\u043E\u0439
-    \u043F\u0435\u0440\u0435\u043C\u0435\u043D\u043D\u043E\u0439 \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0435
-    5 \u0432 C#"
+  m_text: Write a line of code that assigns the value 5 to an integer variable in
+    C#
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6762b5ed95696c44084b12486081a909, type: 2}
   m_sharedMaterial: {fileID: 4352277801950955582, guid: 6762b5ed95696c44084b12486081a909, type: 2}
@@ -647,11 +644,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4691924522e38b64fb3974399becbfe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  question: "\u0421\u043E\u0441\u0442\u0430\u0432\u044C\u0442\u0435 \u0441\u0442\u0440\u043E\u0447\u043A\u0443
-    \u043A\u043E\u0434\u0430, \u043F\u0440\u0438\u0441\u0432\u0430\u044E\u0449\u0438\u0439
-    \u0446\u0435\u043B\u043E\u0447\u0438\u0441\u043B\u0435\u043D\u043D\u043E\u0439
-    \u043F\u0435\u0440\u0435\u043C\u0435\u043D\u043D\u043E\u0439 \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0435
-    5 \u0432 C#"
+  question: Write a line of code that assigns the value 5 to an integer variable
+    in C#
   variationsOfAnswers:
   - answer: char
     orderNumber: 0
@@ -880,7 +874,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0414\u0430\u043B\u0435\u0435!"
+  m_text: Next!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6762b5ed95696c44084b12486081a909, type: 2}
   m_sharedMaterial: {fileID: 4352277801950955582, guid: 6762b5ed95696c44084b12486081a909, type: 2}
@@ -1380,7 +1374,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0427\u0430\u0442"
+  m_text: 'Chat
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6762b5ed95696c44084b12486081a909, type: 2}
   m_sharedMaterial: {fileID: 4352277801950955582, guid: 6762b5ed95696c44084b12486081a909, type: 2}
@@ -2548,7 +2544,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0412\u0438\u043A\u0442\u043E\u0440\u0438\u043D\u0430"
+  m_text: Quiz
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6762b5ed95696c44084b12486081a909, type: 2}
   m_sharedMaterial: {fileID: 4352277801950955582, guid: 6762b5ed95696c44084b12486081a909, type: 2}
@@ -2575,7 +2571,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 41.7
+  m_fontSize: 60
   m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3239,11 +3235,8 @@ MonoBehaviour:
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_CustomCaretColor: 0
   m_SelectionColor: {r: 0.65882355, g: 0.80784315, b: 1, a: 0.7529412}
-  m_Text: "\u0421\u043E\u0441\u0442\u0430\u0432\u044C\u0442\u0435 \u0441\u0442\u0440\u043E\u0447\u043A\u0443
-    \u043A\u043E\u0434\u0430, \u043F\u0440\u0438\u0441\u0432\u0430\u044E\u0449\u0438\u0439
-    \u0446\u0435\u043B\u043E\u0447\u0438\u0441\u043B\u0435\u043D\u043D\u043E\u0439
-    \u043F\u0435\u0440\u0435\u043C\u0435\u043D\u043D\u043E\u0439 \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0435
-    5 \u0432 C#"
+  m_Text: Write a line of code that assigns the value 5 to an integer variable in
+    C#
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
@@ -3554,11 +3547,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0421\u043E\u0441\u0442\u0430\u0432\u044C\u0442\u0435 \u0441\u0442\u0440\u043E\u0447\u043A\u0443
-    \u043A\u043E\u0434\u0430, \u043F\u0440\u0438\u0441\u0432\u0430\u044E\u0449\u0438\u0439
-    \u0446\u0435\u043B\u043E\u0447\u0438\u0441\u043B\u0435\u043D\u043D\u043E\u0439
-    \u043F\u0435\u0440\u0435\u043C\u0435\u043D\u043D\u043E\u0439 \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0435
-    5 \u0432 C#\u200B"
+  m_text: "Write a line of code that assigns the value 5 to an integer variable in
+    C#\u200B"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6762b5ed95696c44084b12486081a909, type: 2}
   m_sharedMaterial: {fileID: 4352277801950955582, guid: 6762b5ed95696c44084b12486081a909, type: 2}
@@ -3585,7 +3575,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 69.8
+  m_fontSize: 89.3
   m_fontSizeBase: 14
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -5018,7 +5008,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 8147075086086280102}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.992231
+  m_Size: 0.9688631
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -5090,7 +5080,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u041F\u0440\u0438\u043C\u0435\u0440\u044B"
+  m_text: 'Examples
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6762b5ed95696c44084b12486081a909, type: 2}
   m_sharedMaterial: {fileID: 4352277801950955582, guid: 6762b5ed95696c44084b12486081a909, type: 2}
@@ -5378,7 +5370,7 @@ RectTransform:
   m_Father: {fileID: 8147075085759756811}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.0077689886}
+  m_AnchorMin: {x: 0, y: 0.03113687}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
@@ -6038,13 +6030,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "//\u041A\u043E\u0434, \u043F\u0440\u0438\u0441\u0432\u0430\u0438\u0432\u0430\u044E\u0449\u0438\u0439
-    \u0441\u0442\u0440\u043E\u043A\u043E\u0432\u043E\u0439 \u043F\u0435\u0440\u0435\u043C\u0435\u043D\u043D\u043E\u0439
-    \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0435 \"A\"\nchar letter = 'A';\n\n\n//\u041A\u043E\u0434,
-    \u043F\u0440\u0438\u0441\u0432\u0430\u0438\u0432\u0430\u044E\u0449\u0438\u0439
-    \u0442\u0435\u043A\u0441\u0442\u043E\u0432\u043E\u0439 \u043F\u0435\u0440\u0435\u043C\u0435\u043D\u043D\u043E\u0439
-    \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0435 \"Hello world\"\nstring word
-    = \"Hello world\";"
+  m_text: "//Code assigning \u201CA\u201D to a string variable\nchar letter = 'A';\n\n\n//Code
+    that assigns the value \u201CHello world\u201D to the text variable\nstring word
+    = \u201CHello world\u201D;"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6762b5ed95696c44084b12486081a909, type: 2}
   m_sharedMaterial: {fileID: 4352277801950955582, guid: 6762b5ed95696c44084b12486081a909, type: 2}
@@ -7764,6 +7752,10 @@ PrefabInstance:
     - target: {fileID: 2038300897388107494, guid: 9e52357a07be0134b80ea704d526d2b2, type: 3}
       propertyPath: m_Name
       value: Info box
+      objectReference: {fileID: 0}
+    - target: {fileID: 2174118051781839334, guid: 9e52357a07be0134b80ea704d526d2b2, type: 3}
+      propertyPath: m_text
+      value: Hello, Traveler! I'm your interactive assistant in the world of programming!
       objectReference: {fileID: 0}
     - target: {fileID: 6574374907556483488, guid: 9e52357a07be0134b80ea704d526d2b2, type: 3}
       propertyPath: m_Pivot.x
