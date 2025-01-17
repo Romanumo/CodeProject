@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class TriggerEvent : MonoBehaviour
 {
-    [SerializeField] private UnityEvent onTrigger;
+    [SerializeField] private UnityEvent<bool> onTrigger;
     bool isTriggered = false;
 
     void Update()
@@ -24,7 +24,7 @@ public class TriggerEvent : MonoBehaviour
 
     private void WindowState(bool state)
     {
-        onTrigger?.Invoke();
+        onTrigger?.Invoke(state);
         Time.timeScale = (state) ? 0.05f : 1;
         isTriggered = state;
 

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Computer : MonoBehaviour
+public class Computer : MonoBehaviour
 {
     [SerializeField] protected float range;
     [SerializeField] protected GameObject cam;
