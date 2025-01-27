@@ -48,4 +48,5 @@ Setuped assistant understands, in which game it located and what goal of the gam
 
 ### Disclaimer
 Currently, due to the end of the hackathon event, our current OpenAI API keys are no longer working. Integrated in-game ChatGPT assistant is no longer available
+
 This project has been changed since the end of the Hackathon. Those are the minimal changes that simplified and refactored already existing code
