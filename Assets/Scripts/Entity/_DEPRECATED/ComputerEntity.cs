@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ComputerEntity : MonoBehaviour
 {
-    [SerializeField] private CompilerProgram compiler;
+    [SerializeField] private Compiler compiler;
     [SerializeField] private float range;
     [SerializeField] private Camera compilerCam;
 
@@ -40,7 +40,7 @@ public class ComputerEntity : MonoBehaviour
 
     private void ChangeGameState()
     {
-        compiler.CompilerState(programState);
+        //compiler.CompilerState(programState);
         ChangeComputerControl(programState);
         player.ChangeControl(!programState);
     }

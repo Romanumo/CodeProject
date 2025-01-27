@@ -4,13 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class TestQuestionsManager : MonoBehaviour
+public class TestQuestionsManager : QuizManager
 {
 	[SerializeField][HideInInspector] private ToggleGroup toggleGroupOfOptions;
 	[SerializeField][HideInInspector] private Button buttonToNextLevel;
 	[SerializeField][HideInInspector] private int correctOptionOfAnswer;
-	[SerializeField] private ComputerTheory theory;
-	[SerializeField] private ComputerSounds sounds;
 
 	private void Update()
 	{
@@ -23,28 +21,12 @@ public class TestQuestionsManager : MonoBehaviour
 	public void OnClickButtonToNextLevel()
 	{
 		Toggle chosenAnswer = toggleGroupOfOptions.GetFirstActiveToggle();
+
 		if (chosenAnswer.name == correctOptionOfAnswer.ToString())
-		{
-			OnWinLevel();
-		}
+			onWin?.Invoke();
 		else
-		{
-			OnLoseLevel();
-		}
+			onLose?.Invoke();
 	}
 
 	public void SetCorrectChoosingAnswer(int number) => correctOptionOfAnswer = number;
-
-	private void OnLoseLevel()
-	{
-		Debug.Log("Неправильно!");
-		sounds.IncorrectSound();
-	}
-
-	private void OnWinLevel()
-	{
-		Debug.Log("Вы выиграли!");
-		sounds.CorrectSound();
-		theory.	OpenTheWay();
-	}
 }

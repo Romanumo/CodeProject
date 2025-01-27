@@ -7,20 +7,19 @@ using TMPro;
 using System.Collections.Generic;
 using System.Collections;
 
-public class CompilerProgram : MonoBehaviour
+public class Compiler : Program
 {
     [SerializeField] private TMP_InputField input;
     [SerializeField] private TextMeshProUGUI lineText;
     [SerializeField] private TextMeshProUGUI debugText;
-    [SerializeField] private GameObject compilerWindow;
     [SerializeField] private SyntaxTheme syntaxTheme;
     private List<PracticeEntity> entities;
 
     public PracticeEntity chosenEntity { get; private set; }
     public Type entityType { get; private set; }
 
-    private static CompilerProgram _instance;
-    public static CompilerProgram instance { get => _instance; }
+    private static Compiler _instance;
+    public static Compiler instance { get => _instance; }
 
     public void Awake()
     {
@@ -30,20 +29,17 @@ public class CompilerProgram : MonoBehaviour
         entities = new List<PracticeEntity>();
     }
 
-    /*private void Update()
+    private void Update()
     {
-        input.text = SyntaxHighlighter.HighlightCode(input.text, syntaxTheme);
-    }*/
+        //input.text = SyntaxHighlighter.HighlightCode(input.text, syntaxTheme);
+    }
 
-    public void CompilerState(bool state)
+    public override void ProgramState(bool state)
     {
         foreach (PracticeEntity entity in entities)
         {
             entity.outline.enabled = state;
         }
-
-        compilerWindow.SetActive(state);
-        Cursor.lockState = (state) ? CursorLockMode.None : CursorLockMode.Locked;
     }
 
     public void ChangeChosenEntity(PracticeEntity entity)
@@ -53,15 +49,9 @@ public class CompilerProgram : MonoBehaviour
         chosenEntity = entity;
     }
 
-    public void Subscribe(PracticeEntity entity)
-    {
-        entities.Add(entity);
-    }
+    public void Subscribe(PracticeEntity entity) => entities.Add(entity);
 
-    public void Unsubscribe(PracticeEntity entity)
-    {
-        entities.Remove(entity);
-    }
+    public void Unsubscribe(PracticeEntity entity) => entities.Remove(entity);
 
     #region CoreCompiler
     public void Run()
@@ -74,7 +64,7 @@ public class CompilerProgram : MonoBehaviour
         {
             public static void Foo()
             {
-                " + entityType.ToString() + " entity = CompilerProgram.instance.chosenEntity as " + entityType.ToString() + @";" + userCode + @"
+                " + entityType.ToString() + " entity = Compiler.instance.chosenEntity as " + entityType.ToString() + @";" + userCode + @"
             }
         }";
 
@@ -122,8 +112,5 @@ public class CompilerProgram : MonoBehaviour
             lineText.text += i + 1 + "|\n";
         }
     }
-
-    public void StopTime() => Time.timeScale = 0;
-    public void ResumeTime() => Time.timeScale = 1;
     #endregion
 }

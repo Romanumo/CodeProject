@@ -6,7 +6,6 @@ using TMPro;
 public class VariablesManager : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI infoText;
-    [SerializeField] private CompilerProgram compiler;
 
     private static VariablesManager _instance;
     public static VariablesManager instance { get => _instance; }
@@ -37,7 +36,7 @@ public class VariablesManager : MonoBehaviour
 
     public void ChangeChosenEntity(PracticeEntity entity)
     {
-        compiler.ChangeChosenEntity(entity);
+        Compiler.instance.ChangeChosenEntity(entity);
         ShowInfo(entity);
     }
 }

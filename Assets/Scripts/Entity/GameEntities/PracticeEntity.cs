@@ -14,14 +14,14 @@ public abstract class PracticeEntity : MonoBehaviour
     protected void Start()
     {
         outline = GetComponent<Outline>();
-        CompilerProgram.instance?.Subscribe(this);
+        Compiler.instance?.Subscribe(this);
 
         InitInfo();
     }
 
     private void OnDestroy()
     {
-        CompilerProgram.instance?.Unsubscribe(this);
+        Compiler.instance?.Unsubscribe(this);
     }
 
     private void InitInfo()

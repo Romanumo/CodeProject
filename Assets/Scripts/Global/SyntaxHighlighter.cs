@@ -66,7 +66,6 @@ public static class SyntaxHighlighter {
                 if (startEndIndices[colIndex].x == nonSpaceIndex) {
                     actualStartIndex = i;
                 } else if (startEndIndices[colIndex].y == nonSpaceIndex) {
-                    //print (colIndex + " replace: " + startEndIndices[colIndex] +" with:  " + new Vector2Int (actualStartIndex, i));
                     startEndIndices[colIndex] = new Vector2Int (actualStartIndex, i);
 
                     colIndex++;

@@ -17,12 +17,18 @@ public class GeneralFunctions : MonoBehaviour
             _instance = this;
     }
 
+    public void StopTime() => Time.timeScale = 0;
+
+    public void ResumeTime() => Time.timeScale = 1;
+
+    #region BlackOut
     public static void BlackScreenBoth(float time, Action postBlack)
     {
-        TimerManager.manager.AddProgressiveTimer(() => {
+        TimerManager.manager.AddProgressiveTimer(() =>
+        {
             TimerManager.manager.AddProgressiveTimer(null, BlackScreenFadeOut, time);
             postBlack?.Invoke();
-            }, BlackScreenFadeIn, time);
+        }, BlackScreenFadeIn, time);
     }
 
     public static void BlackScreen(float time, Action postBlack, bool isInverted = false)
@@ -45,5 +51,6 @@ public class GeneralFunctions : MonoBehaviour
         color.a = percentage;
 
         GeneralFunctions.instance.blackScreen.color = color;
-    }
+    } 
+    #endregion
 }
