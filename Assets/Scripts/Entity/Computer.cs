@@ -6,33 +6,30 @@ public class Computer : MonoBehaviour
 {
     [SerializeField] private float range;
     [SerializeField] private GameObject compCam;
+    [SerializeField] private ComputerSoundManager soundManager;
 
     private Program program;
-    private AudioSource source;
     private Player player;
+
     private bool programState = false;
             
     void Awake()
     {
-        program = GetComponent<Program>();
-        source = GetComponent<AudioSource>();
+        TryGetComponent<Program>(out program);
         player = FindObjectOfType<Player>();
     }
 
     void Update()
     {
-        //TODO: Sounds into a sepaarte computerSoundManager
+        //TODO: Sounds into a separte computerSoundManager
         if (IsInRange() && Input.GetKeyDown(KeyCode.Escape))
         {
             programState = !programState;
 
-            if (programState)
-                source.Play();
-            else
-            {
-                source.time = 0;
-                source.Stop();
-            }
+            soundManager.ComputerState(programState);
+
+            if(Time.timeScale == 0) 
+                GeneralFunctions.instance.ResumeTime();
 
             GeneralFunctions.BlackScreenBoth(0.5f, ChangeGameState);
         }
@@ -53,4 +50,6 @@ public class Computer : MonoBehaviour
         float dist = (transform.position - player.transform.position).magnitude;
         return dist < range;
     }
+
+    public ComputerSoundManager GetSoundManager() => soundManager;
 }

@@ -15,15 +15,16 @@ public class ConditionalProgram : Program
         Destroy(this);
     }
 
-    //TODO: Add sounds
     protected virtual void OnWin()
     {
-        Debug.Log("Won round");
-        wall.SetActive(false);
+        if (wall != null) 
+            wall.SetActive(false);
+
+        hardware.GetSoundManager().CorrectSound();
     }
 
     protected virtual void OnLose()
     {
-        Debug.Log("Lost round");
+        hardware.GetSoundManager().IncorrectSound();
     }
 }

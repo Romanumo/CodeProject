@@ -37,7 +37,7 @@ Transform:
   m_Children:
   - {fileID: 5098620804560742370}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5098620804022331375
 MeshFilter:
@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0eb792b35773264292e696ccc3b767f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensetivity: 1
+  mouseSensetivity: 0.5
   maxXrot: 90
   minXrot: -90
 --- !u!114 &5098620804022331371
@@ -152,7 +152,7 @@ MonoBehaviour:
   walkSpeed: 10
   runSpeed: 25
   runBuildUp: 1
-  walkingSound: {fileID: 8300000, guid: 7715a1d3b2147dd46aa4c75e7efee03c, type: 3}
+  walkingSound: {fileID: 8300000, guid: 0f1812eb5ea06b340b980e0339fba7ac, type: 3}
   GForceVal: -30
   jumpHeight: 5
   slopeForce: 0
@@ -179,7 +179,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: cc706d4b9f555ef419a58a39bab02e6e, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -377,7 +377,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7ce4212df040a34daee17df50416991, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distortionIterations: 6
+  distortionIterations: 8
   threshold: 0.89
   softThreshold: 0.67
   intensity: 1.08
